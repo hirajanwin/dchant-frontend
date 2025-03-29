@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ghibli Style Image Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Ghibli Style Image Generator</h1>
+        <div class="credits-container">
+            <span id="credits-display">Credits: 0</span>
+            <button id="buy-credits-button" class="btn">Buy Credits</button>
+        </div>
+        <div class="upload-container">
+            <label for="image-upload" class="upload-label">
+                <span>Upload Image</span>
+                <input type="file" id="image-upload" accept="image/*" class="hidden">
+            </label>
+        </div>
+        <div id="preview-container" class="hidden">
+            <img id="preview-image" alt="Preview">
+            <textarea id="description" placeholder="Enter a description for your image..."></textarea>
+            <button id="generate-button" class="btn">Generate (20 credits)</button>
+        </div>
+        <div id="result-container" class="hidden">
+            <img id="result-image" alt="Generated Image">
+            <button id="download-button" class="btn">Download</button>
+        </div>
+    </div>
+    <div id="loading-overlay" class="hidden">
+        <div class="loading-spinner"></div>
+        <p>Generating your Ghibli-style masterpiece...</p>
+    </div>
+    <div id="toast" class="toast hidden"></div>
+    <script src="api.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
